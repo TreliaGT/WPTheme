@@ -27,6 +27,7 @@
     background-color:$light;
     border-radius: 18px;
     padding-block: 20px 80px;
+    box-shadow: #a8a8a8 6px 5px 0px 0px;
     .grid-container {
         padding-inline: 50px;
         padding-top: 50px;
@@ -73,12 +74,17 @@
 
 section#subscribe{
     >div{
-        border-left:dotted 31px $bg;
+        --mask:
+        radial-gradient(19.81px at 27.95px 50%,#000 99%,#0000 101%) 0 calc(50% - 26px)/100% 52px,
+        radial-gradient(19.81px at -14.95px 50%,#0000 99%,#000 101%) 13px 50%/100% 52px repeat-y;
+      -webkit-mask: var(--mask);
+              mask: var(--mask);
         background-color:$third;
-        padding: 45px;
+        padding: 45px 80px;
         border-radius: 15px;
         display: flex;
         align-items: center;
+        box-shadow: #78929b 6px 5px 0px 0px;
         >div{
             width:50%;
 
@@ -99,3 +105,53 @@ section#subscribe{
         }
     }
 }
+
+section#blank{
+    >div{
+        text-align:center;
+        color:$light;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        >div{
+            max-width:900px;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+section#book{
+    >div{
+        display:flex;
+        gap:20px;
+        .page{
+            position: relative;
+            border-radius: 15px;
+            background-color: $light;
+            width:50%;
+            padding:80px 50px;
+            
+            .content{
+                margin-bottom: 20px;
+            }
+            &:first-child{
+                box-shadow: #a8a8a8 -10px 8px 0px 0px;
+                --mask:
+                radial-gradient(13px at calc(100% - 13px) 50%,#000 99%,#0000 101%) 0 calc(50% - 26px)/100% 52px,
+                radial-gradient(13px at calc(100% + 0px) 50%,#0000 99%,#000 101%) calc(100% - 13px) 50%/100% 52px repeat-y;
+              -webkit-mask: var(--mask);
+                      mask: var(--mask);
+            }
+
+            &:last-child{
+                box-shadow: #a8a8a8 6px 5px 0px 0px;
+                --mask:
+                radial-gradient(13px at 13px 50%,#000 99%,#0000 101%) 0 calc(50% - 26px)/100% 52px,
+                radial-gradient(13px at 0px 50%,#0000 99%,#000 101%) 13px 50%/100% 52px repeat-y;
+              -webkit-mask: var(--mask);
+                      mask: var(--mask);
+            }
+        }
+    }
+}
+
