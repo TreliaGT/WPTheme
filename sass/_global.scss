@@ -1,0 +1,113 @@
+html {
+    font-size: 10px;
+}
+
+body{
+    margin:0;
+    font-family:$body_font;
+    font-size:1.8em;
+    background-color: $bg;
+}
+
+h1 ,h2,h3{
+    font-family: $heading_font;
+}
+
+h1{
+    font-size:5em;
+    margin:0px;
+}
+
+h2{
+    font-size:4em;
+    margin:0px;
+}
+
+h3{
+    font-size:3em;
+    margin:0px;
+}
+.container-nopd{
+    max-width:1600px;
+    margin:auto;
+}
+
+.container{
+    max-width:1600px;
+    margin:auto;
+    padding-block:80px;
+
+    @media(max-width:980px){
+        padding:25px;
+    }
+}
+
+
+.button{
+    display:block;
+    font-weight: bold;
+    align-self:center;
+    background:transparent;
+    padding:1rem 1rem;
+    transition:all .2s ease;
+    color:$light;
+    font-size:2.5rem;
+    letter-spacing:1px;
+    outline:none;
+    box-shadow: 5px 5px 0px 0px hsla(113, 57%, 48%, 0.5);
+    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+    width: fit-content;
+    border: 2px solid $primary;
+    font-family: $heading_font;
+    text-decoration: none;
+      &:hover{
+       box-shadow:0px 0px 0px 0px hsla(0, 0%, 100%, 0.5);
+    } 
+}
+
+
+#cursor-dot {
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    transition: opacity 1s linear;
+    pointer-events: none;
+    z-index: 9999;
+  }
+  
+  #cursor-circle {
+    z-index: 9999;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 50%;
+    border: 1px solid #fff;
+    box-sizing: border-box;
+    position: absolute;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    transition: background-color 0.3s linear, border 0.3s linear,
+      width 0.2s linear, height 0.2s linear, opacity 0.7s 0.3s linear;
+    pointer-events: none;
+  }
+
+  
+  a:hover {
+    cursor: none;
+  }
+  
+  /*also you can use :has selector to replace script */
+  body:has(a:hover) {
+    #cursor-circle {
+      width: 80px;
+      height: 80px;
+      background: rgba(255, 255, 255, 0.4);
+      border: 1px solid transparent;
+    }
+  }
