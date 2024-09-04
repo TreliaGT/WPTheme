@@ -22,7 +22,13 @@ function enqueue_custom_scripts() {
         null // Version (null for no version)
     );
 
-
+    wp_enqueue_script(
+        'gsap', // Handle name for GSAP
+        'https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js', // URL to GSAP
+        array(), // Dependencies (none)
+        null, // Version (null for no version)
+        true // Load in footer
+    );
     // Enqueue Lucide script
     wp_enqueue_script(
         'lucide-script', // Handle name for the script

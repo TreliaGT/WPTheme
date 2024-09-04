@@ -22,3 +22,80 @@
         }
     }
 }
+
+#grid{
+    background-color:$light;
+    border-radius: 18px;
+    padding-block: 20px 80px;
+    .grid-container {
+        padding-inline: 50px;
+        padding-top: 50px;
+        margin-inline: 20px;
+        border-top: dotted 50px $bg;
+        display:grid;
+        grid-template-columns: repeat(4,1fr);
+        gap:20px;
+        .grid-item{
+            transition: transform 0.5s ease-in-out;
+            padding:25px;
+            border:2px solid $bg;
+            border-radius:24px;
+            background-color: $light;
+            h2{
+                font-size:1.8em;
+            }
+            .content{
+                max-width:300px;
+            }
+            &:nth-child(1) {
+                background-color: $secondary; /* Color for the first item */
+            }
+            
+            &:nth-child(3) {
+                background-color: $third; /* Color for the third item */
+            }
+            
+            &:nth-child(6) {
+                background-color: $primary; /* Color for the fifth item */
+            }
+
+            &:last-child{
+                grid-column: 2 span;
+                background: $secondary;
+            }
+            &:hover{
+                transform: scale(1.09);
+            }
+        }
+    }
+}
+
+
+section#subscribe{
+    >div{
+        border-left:dotted 31px $bg;
+        background-color:$third;
+        padding: 45px;
+        border-radius: 15px;
+        display: flex;
+        align-items: center;
+        >div{
+            width:50%;
+
+        }
+        .form{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .content{
+            >div{
+                max-width: 900px;
+                margin-bottom: 20px;
+            }
+            .button{
+                color:black;
+            }
+        }
+    }
+}

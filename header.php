@@ -7,8 +7,8 @@
     <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
-<div id="cursor-dot"></div>
-<div id="cursor-circle"></div>
+<div id="cursor-dot"> <div id="cursor-circle"></div> </div>
+
     <header id="header">
         <div class="container-nopd">
             <span><a href="<?php echo esc_url(home_url('/')); ?>"><?php bloginfo('name'); ?></a></span>
