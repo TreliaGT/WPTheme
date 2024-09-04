@@ -129,7 +129,7 @@ h3{
   }
   
   /*also you can use :has selector to replace script */
-  body:has(a:hover) {
+  body:has(a:hover) ,   body:has(input[type="submit"]:hover){
     #cursor-circle {
       width: 80px;
       height: 80px;

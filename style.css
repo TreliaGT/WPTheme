@@ -141,7 +141,7 @@ a:hover {
   cursor: none; }
 
 /*also you can use :has selector to replace script */
-body:has(a:hover) #cursor-circle {
+body:has(a:hover) #cursor-circle, body:has(input[type="submit"]:hover) #cursor-circle {
   width: 80px;
   height: 80px;
   background: rgba(255, 255, 255, 0.4);
@@ -273,6 +273,36 @@ header {
     header.sticky ul#secondary-menu, header.sticky .container-nopd span {
       margin: 0px;
       padding-block: 0px; }
+
+footer {
+  border-top: dashed 2px #fff;
+  padding-block: 25px;
+  color: #fff; }
+  footer > div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+    footer > div nav ul {
+      padding: 0px;
+      list-style: none;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      gap: 20px; }
+      footer > div nav ul li a {
+        color: #fff;
+        text-decoration: none;
+        -webkit-transition: color 0.4s ease-in-out;
+        -o-transition: color 0.4s ease-in-out;
+        transition: color 0.4s ease-in-out; }
+      footer > div nav ul li:hover a {
+        color: #90ee90; }
 
 #banner {
   color: white;

@@ -1,0 +1,29 @@
+footer{
+    border-top: dashed 2px $light;
+    padding-block: 25px;
+    color:$light;
+    >div{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        nav ul{
+            padding:0px;
+            list-style: none;
+            display:flex;
+            gap:20px;
+
+            li{
+                a{
+                    color:$light;
+                    text-decoration: none;
+                    transition: color 0.4s ease-in-out;
+                }
+                &:hover{
+                    a{
+                        color:$primary;
+                    }
+                }
+            }
+        }
+    }
+}

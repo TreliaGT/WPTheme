@@ -1,5 +1,5 @@
 <footer>
-        <div class="container">
+        <div class="container-nopd">
             <p>&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?></p>
             <nav>
                 <?php
