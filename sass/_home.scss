@@ -69,6 +69,23 @@
             }
         }
     }
+
+    @media(max-width:980px){
+        .grid-container{
+            grid-template-columns: repeat(2,1fr);
+        }
+    }
+
+    @media(max-width:980px){
+        .grid-container{
+            grid-template-columns: repeat(1,1fr);
+            .grid-item{
+                &:last-child{
+                    grid-column: 1 span;
+                }
+            }
+        }
+    }
 }
 
 

@@ -396,6 +396,17 @@ footer {
         -webkit-transform: scale(1.09);
         -ms-transform: scale(1.09);
         transform: scale(1.09); }
+  @media (max-width: 980px) {
+    #grid .grid-container {
+      -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 980px) {
+    #grid .grid-container {
+      -ms-grid-columns: (1fr)[1];
+      grid-template-columns: repeat(1, 1fr); }
+      #grid .grid-container .grid-item:last-child {
+        -ms-grid-column-span: 1;
+        grid-column: 1 span; } }
 
 section#subscribe > div {
   --mask:
