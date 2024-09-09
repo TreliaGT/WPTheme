@@ -8,15 +8,15 @@
     // Check if unserialization was successful
 if ($data && is_array($data)) {
    ?>
-        <section id="grid" class="container-nopd">
+        <section id="grid" class="container-nopd light">
             <div class="grid-container">
                 <?php 
                     foreach ($data as $item) {
                         if (isset($item['title']) && isset($item['content'])) {
-                            echo '<div class="grid-item">';
+                            echo '<div class="grid-item"> <a>';
                             echo '<h2 class="title">' . esc_html($item['title']) . '</h2>';
                             echo '<div class="content">' . esc_html($item['content']) . '</div>';
-                            echo '</div>';
+                            echo '</a></div>';
                         }
                     }
                 ?>

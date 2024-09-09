@@ -155,3 +155,80 @@ section#book{
     }
 }
 
+#promo{
+    background-color: $secondary;
+    padding:25px;
+    border-radius: 24px;
+    max-width:1200px;
+    .main{
+        display: flex;
+        align-items: center;
+        gap:25px;
+        >div{
+            width:80%;
+            position: relative;
+            >div{
+                max-width: 800px;
+
+            }
+
+            &:before{
+                position: absolute;
+                content: "";
+                display: block;
+                width: 40px;
+                height: 100%;
+                background-color: transparent;
+                border-right: $bg dashed 5px;
+                right: 17px;
+                top: 0px;
+            }
+        }
+        a{
+            margin:auto;
+            position: relative;
+            
+            &:before{
+                position: absolute;
+                content: "";
+                display: block;
+                width: 40px;
+                height: 40px;
+                background-color: $bg;
+                border-radius: 100px;
+                left: -100px;
+                top: -100px;
+            }
+
+            &:after{
+                position: absolute;
+                content: "";
+                display: block;
+                width: 40px;
+                height: 40px;
+                background-color: $bg;
+                border-radius: 100px;
+                left: -100px;
+                bottom: -100px;
+            }
+        }
+    }
+}
+
+section#two{
+    display:flex;
+    gap:25px;
+    .item{
+        background-color: $light;
+        padding:25px;
+        border: 2px solid #0f1425;
+        border-radius: 24px;
+        box-shadow: #a8a8a8 6px 5px 0px 0px;
+        transform: scale(1);
+        transition: transform 0.5s ease-in-out;
+
+        &:hover{
+            transform: scale(1.02);
+        }
+    }
+}
